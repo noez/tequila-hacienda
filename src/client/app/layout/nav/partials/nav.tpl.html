@@ -1,0 +1,67 @@
+<div class="wrap-nav">
+    <!-- Overlay -->
+    <div class="left-bar__overlay">&nbsp;</div>
+    <!-- Folded Menu -->
+    <div class="left-bar__thin">
+        <div class="logo">
+            <a href="" class="logo__image">Tequila Hacienda Maravatio</a>
+        </div>
+    </div>
+    <!-- Spread out Menu -->
+    <div class="left-bar__wide">
+        <div class="spread-menu">
+            <div class="spread-menu__header">
+                <div class="logo-header">
+                    <a ui-sref="home" class="logo-header__image">Tequila Hacienda Maravatio</a>
+                </div>
+            </div>
+            <div class="spread-menu__body">
+                <nav class="nav-types">
+                    <h3 class="nav-types__heading">Haz que ese momento perdure por siempre selecciona el tequila de
+                        tu preferencia y personaliza tu etiqueta.</h3>
+                    <ul class="list-unstyled type-list">
+                        <li class="type-list__item" ng-repeat="type in vm.types">
+                            <a class="type-item" ui-sref="timeline.version({ typeid: type.id })">
+                                <div class="type-item__body">
+                                    <img ng-src="{{ type.bimage }}" alt="type.name" height="200">
+                                </div>
+                                <div class="type-item__footer">
+                                    <h2 class="type-item__name">{{type.name}}</h2>
+                                </div>
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav>
+                <!-- Social icons -->
+                <div class="social-media">
+                    <a href="" class="social-media__item">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                    <a href="" class="social-media__item">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                </div>
+                <!-- Footer -->
+                <footer class="footer">
+                    <ul class="list-unstyled footer-links">
+                        <li class="footer-links__item">
+                            <a href="">Contacto</a>
+                        </li>
+                        <li class="footer-links__item">
+                            <a href="">Términos y Condiciones</a>
+                        </li>
+                        <li class="footer-links__item">
+                            THM {{ vm.date }} <i class="fa fa-copyright"></i> | Desarrollado por <a href="">Mucha-Web</a>
+                        </li>
+                    </ul>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <div class="left-bar__close">
+        <div class="logo close-button">
+            <a href="#" class="logo__image">Tequila Hacienda Maravatio</a>
+        </div>
+    </div>
+</div>

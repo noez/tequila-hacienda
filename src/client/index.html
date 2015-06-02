@@ -27,7 +27,8 @@
 </head>
 <body>
     <div class="wrapper">
-        <mw-left-nav></mw-left-nav>
+        <div ng-include src="'/src/client/app/layout/nav/nav.html'"
+            include-replace></div>
     </div>
 
     <!-- build:js js/lib.js -->
@@ -46,8 +47,19 @@
     <!-- inject:js -->
     <script src="/src/client/app/app.module.js"></script>
     <script src="/src/client/app/core/core.module.js"></script>
-    <script src="/src/client/app/widgets/widgets.module.js"></script>
+    <script src="/src/client/app/core/constants.js"></script>
+    <script src="/src/client/app/services/services.module.js"></script>
+    <script src="/src/client/app/services/types.js"></script>
     <script src="/src/client/app/layout/layout.module.js"></script>
+    <script src="/src/client/app/widgets/widgets.module.js"></script>
+
+    <!-- widgets -->
+    <script src="/src/client/app/widgets/include-replace.directive.js"></script>
+
+    <!-- layout -->
+    <script src="/src/client/app/layout/nav/nav.controller.js"></script>
+    <script src="/src/client/app/layout/nav/nav.directive.js"></script>
+
     <!-- endinject -->
     <!-- endinject -->
 
